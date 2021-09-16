@@ -10,7 +10,7 @@ public class PoolClient3 {
 
 
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		MessageDispatcher.register(DomeClientHandler.class);
 		IClient c = new PooledClient("127.0.0.1", 9000);
 		int i = 0;

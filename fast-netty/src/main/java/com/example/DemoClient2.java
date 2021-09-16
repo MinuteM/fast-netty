@@ -7,7 +7,7 @@ import com.protobuf.Protobuf;
 
 public class DemoClient2 extends TcpClient {
 
-	public DemoClient2(String hosts, int port) {
+	public DemoClient2(String hosts, int port) throws Exception {
 		super(hosts, port);
 	}
 
@@ -18,7 +18,7 @@ public class DemoClient2 extends TcpClient {
 	}
 
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		DemoClient2 c  = new DemoClient2("127.0.0.1",9000);
 		c.start();
 		int i=0;

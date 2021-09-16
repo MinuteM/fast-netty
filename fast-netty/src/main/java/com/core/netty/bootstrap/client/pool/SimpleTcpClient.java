@@ -5,10 +5,10 @@ import com.core.dispatcher.MessageDispatcher;
 import com.core.netty.bootstrap.client.TcpClient;
 
 public class SimpleTcpClient extends TcpClient {
-	public SimpleTcpClient(String hosts,int port ) {
+	public SimpleTcpClient(String hosts,int port ) throws Exception {
 		super(hosts, port);
 	}
-	public SimpleTcpClient(String hosts,int port,HandlerRegister register) {
+	public SimpleTcpClient(String hosts,int port,HandlerRegister register) throws Exception {
 		super(hosts, port);
 		this.register = register;
 		init();

@@ -13,7 +13,7 @@ public class TcpClientFactory extends BasePoolableObjectFactory {
 	protected Logger log = LoggerFactory.getLogger(this.getClass());
 	private SimpleTcpClient client;
 
-	public TcpClientFactory(int port, String hosts,HandlerRegister register, boolean isReConn) {
+	public TcpClientFactory(int port, String hosts,HandlerRegister register, boolean isReConn) throws Exception {
 		client = new SimpleTcpClient(hosts,port,register);
 	}
 

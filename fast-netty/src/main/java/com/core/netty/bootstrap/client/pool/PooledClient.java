@@ -14,11 +14,11 @@ public class PooledClient implements IClient{
     //连接池对象
 	private TcpClientChannelPool pools;
 
-	public PooledClient(String hosts,int port) {
+	public PooledClient(String hosts,int port) throws Exception {
 		this.pools = new TcpClientChannelPool(null, port, hosts, null);
 	}
 	
-	public PooledClient(String hosts,int port,Config poolConfig) {
+	public PooledClient(String hosts,int port,Config poolConfig) throws Exception {
 		this.pools = new TcpClientChannelPool(poolConfig, port, hosts, null);
 	}
 	

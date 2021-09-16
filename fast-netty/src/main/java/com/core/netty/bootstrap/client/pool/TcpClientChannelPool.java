@@ -26,7 +26,7 @@ public class TcpClientChannelPool extends Pool<TcpClientChannel> {
 	 * @param register
 	 *            注册的处理类
 	 */
-	public TcpClientChannelPool(Config poolConfig, int port, String hosts, HandlerRegister register) {
+	public TcpClientChannelPool(Config poolConfig, int port, String hosts, HandlerRegister register) throws Exception {
 		super(poolConfig == null ? new PooledConfig().getPoolConfig() : poolConfig,
 				new TcpClientFactory(port, hosts, register, false));
 	}

@@ -131,7 +131,7 @@ public class ClusterDispatcher {
 	 * @param serviceId
 	 * @return
 	 */
-	public IClient getClientByServiceId(String uuid, int serviceType, String serviceId) {
+	public IClient getClientByServiceId(String uuid, int serviceType, String serviceId) throws Exception {
 		
 		String uuidKey = uuid + "-type-" + serviceType;
 		if (serviceId != null) {
@@ -162,7 +162,7 @@ public class ClusterDispatcher {
 	 * @param isDiscovery
 	 * @return
 	 */
-	public IClient getClientByDiscovery(String uuid, int serviceType) {
+	public IClient getClientByDiscovery(String uuid, int serviceType) throws Exception {
 		String uuidKey = uuid + "-type-" + serviceType;
 		// 发现服务
 		Service service = clusterManager.serviceDiscovery(serviceType);
